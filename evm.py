@@ -283,7 +283,10 @@ def opcode_mload(state) -> EVMState:
     if ofset + 32 > len(state.memory):
         state.memory += [0] * (ofset + 32 - len(state.memory))
 
-    value = state.memory[ofset:ofset + 32]
+    values = state.memory[ofset:ofset + 32]
+
+    value = sum([values[i] * (256 ** i) for i in range(size)])
+
     state.stack = state.stack + [value]
 
     return state
