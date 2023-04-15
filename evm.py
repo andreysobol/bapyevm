@@ -366,7 +366,9 @@ def opcode_sload(state) -> EVMState:
     return state
 
 def opcode_sstore(state) -> EVMState:
-    # TODO: implement
+    key = state.pop()
+    value = state.pop()
+    state.storage[key] = value
     return state
 
 def opcode_jump(state) -> EVMState:
