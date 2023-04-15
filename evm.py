@@ -327,3 +327,7 @@ def opcode_dup15(state) -> EVMState:
 
 def opcode_dup16(state) -> EVMState:
     return metaopcode_dup(state, 16)
+
+def metaopcode_swap(state, index) -> EVMState:
+    state.stack = state.stack[:-index] + [state.stack[-1]] + state.stack[-index:-1]
+    return state
