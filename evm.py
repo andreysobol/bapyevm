@@ -173,6 +173,24 @@ def opcode_sar(state) -> EVMState:
         return [y >> x]
     return metaopcode_math(state, sar, 2)
 
+def opcode_address(state) -> EVMState:
+    # TODO: implement
+    return
+
+def opcode_balance(state) -> EVMState:
+    # TODO: implement
+    return
+
+def opcode_origin(state) -> EVMState:
+    # TODO: implement
+    return
+
+def opcode_caller(state) -> EVMState:
+    # TODO: implement
+    return
+
+# TODO: implement much more opcodes
+
 def metaopcode_push(state, size) -> EVMState:
     elements = state.code[state.pc:state.pc+size]
     stack_element = sum([elements[i] * (256 ** i) for i in range(size)])
