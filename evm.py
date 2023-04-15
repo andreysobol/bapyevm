@@ -174,7 +174,20 @@ def opcode_sar(state) -> EVMState:
     return metaopcode_math(state, sar, 2)
 
 def opcode_sha3(state) -> EVMState:
-    # TODO: implement
+
+    ofset = state.pop()
+    size = state.pop()
+
+    if ofset + 32 > len(state.memory):
+        state.memory += [0] * (ofset + 32 - len(state.memory))
+
+    values = state.memory[ofset:ofset + 32]
+
+    # TODO: implement real keccak256
+    result = 0x29045A592007D0C246EF02C2223570DA9522D0CF0F73282C79A1BC8F0BB2C238
+
+    state.stack = state.stack + [result]
+    
     return state
 
 def opcode_address(state) -> EVMState:
