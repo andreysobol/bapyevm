@@ -296,7 +296,8 @@ def opcode_prevrandao(state) -> EVMState:
     return state
 
 def opcode_gaslimit(state) -> EVMState:
-    # TODO: implement
+    gas_limit = state.gas_limit
+    state.stack = state.stack + [gas_limit]
     return state
 
 def opcode_chainid(state) -> EVMState:
