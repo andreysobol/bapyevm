@@ -210,6 +210,7 @@ def opcode_origin(state) -> EVMState:
 
 def opcode_caller(state) -> EVMState:
     # TODO: implement
+    # To implement this we need to implement DELEGATECALL and CALL
     return state
 
 def opcode_callvalue(state) -> EVMState:
