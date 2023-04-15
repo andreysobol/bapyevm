@@ -286,7 +286,8 @@ def opcode_timestamp(state) -> EVMState:
     return state
 
 def opcode_number(state) -> EVMState:
-    # TODO: implement
+    number = state.number
+    state.stack = state.stack + [number]
     return state
 
 def opcode_prevrandao(state) -> EVMState:
