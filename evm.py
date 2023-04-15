@@ -173,23 +173,153 @@ def opcode_sar(state) -> EVMState:
         return [y >> x]
     return metaopcode_math(state, sar, 2)
 
+def opcode_sha3(state) -> EVMState:
+    # TODO: implement
+    return state
+
 def opcode_address(state) -> EVMState:
     # TODO: implement
-    return
+    return state
 
 def opcode_balance(state) -> EVMState:
     # TODO: implement
-    return
+    return state
 
 def opcode_origin(state) -> EVMState:
     # TODO: implement
-    return
+    return state
 
 def opcode_caller(state) -> EVMState:
     # TODO: implement
-    return
+    return state
 
-# TODO: implement much more opcodes
+def opcode_callvalue(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_calldataload(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_calldatasize(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_calldatacopy(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_codesize(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_codecopy(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_gasprice(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_extcodesize(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_extcodecopy(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_returndatasize(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_returndatacopy(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_blockhash(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_coinbase(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_timestamp(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_number(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_prevrandao(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_gaslimit(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_chainid(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_selfbalance(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_basefee(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_pop(state) -> EVMState:
+    state.stack = state.stack[:-1]
+    return state
+
+def opcode_mload(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_mstore(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_mstore8(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_sload(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_sstore(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_jump(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_jumpi(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_pc(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_msize(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_gas(state) -> EVMState:
+    # TODO: implement
+    return state
+
+def opcode_jumpdest(state) -> EVMState:
+    # TODO: implement
+    return state
 
 def metaopcode_push(state, size) -> EVMState:
     elements = state.code[state.pc:state.pc+size]
