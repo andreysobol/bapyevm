@@ -15,10 +15,10 @@ class EVMState:
         self.blocknumber = 0
         self.coinbase = 0
         self.timestamp = 0
-        self.number = 0
-        self.difficulty = 0
-        self.gaslimit = 0
         self.prevrandao = 0
+        self.number = 0
+        self.gaslimit = 0
+        self.chainid = 0
 
 def metaopcode_math(state, op, size) -> EVMState:
 
@@ -301,7 +301,8 @@ def opcode_gaslimit(state) -> EVMState:
     return state
 
 def opcode_chainid(state) -> EVMState:
-    # TODO: implement
+    chain_id = state.chain_id
+    state.stack = state.stack + [chain_id]
     return state
 
 def opcode_selfbalance(state) -> EVMState:
