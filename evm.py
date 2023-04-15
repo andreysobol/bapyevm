@@ -397,3 +397,63 @@ def opcode_swap15(state) -> EVMState:
 
 def opcode_swap16(state) -> EVMState:
     return metaopcode_swap(state, 16)
+
+def opcode_log0(state) -> EVMState:
+    # TODO: implement LOG0
+    return state
+
+def opcode_log1(state) -> EVMState:
+    # TODO: implement LOG1
+    return state
+
+def opcode_log2(state) -> EVMState:
+    # TODO: implement LOG2
+    return state
+
+def opcode_log3(state) -> EVMState:
+    # TODO: implement LOG3
+    return state
+
+def opcode_log4(state) -> EVMState:
+    # TODO: implement LOG4
+    return state
+
+def opcode_create(state) -> EVMState:
+    # TODO: implement CREATE
+    return state
+
+def opcode_call(state) -> EVMState:
+    # TODO: implement CALL
+    return state
+
+def opcode_callcode(state) -> EVMState:
+    # TODO: implement CALLCODE
+    return state
+
+def opcode_return(state) -> EVMState:
+    # TODO: implement RETURN
+    return state
+
+def opcode_delegatecall(state) -> EVMState:
+    # TODO: implement DELEGATECALL
+    return state
+
+def opcode_create2(state) -> EVMState:
+    # TODO: implement CREATE2
+    return state
+
+def opcode_staticcall(state) -> EVMState:
+    # TODO: implement STATICCALL
+    return state
+
+def opcode_revert(state) -> EVMState:
+    # TODO: implement REVERT
+    return state
+
+def opcode_invalid(state) -> EVMState:
+    # TODO: implement INVALID
+    return state
+
+def opcode_selfdestruct(state) -> EVMState:
+    # TODO: implement SELFDESTRUCT
+    return state
