@@ -4,6 +4,7 @@ class EVMState:
         self.stack = []
         self.memory = []
         self.storage = {}
+        self.logs = []
         self.pc = 0
 
         # eth values
@@ -602,6 +603,17 @@ def opcode_swap15(state) -> EVMState:
 
 def opcode_swap16(state) -> EVMState:
     return metaopcode_swap(state, 16)
+
+def metaopcode_log(state, topic_size) -> EVMState:
+    offset = state.stack.pop()
+    size = state.stack.pop()
+    if topic_size > 0:
+        topics = [state.stack.pop() for _ in range(topic_size)]
+    else:
+        topics = []
+
+    state.logs.append((offset, size, topics))
+    return state
 
 def opcode_log0(state) -> EVMState:
     # TODO: implement LOG0
