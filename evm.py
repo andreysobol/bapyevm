@@ -298,12 +298,20 @@ def opcode_mstore(state) -> EVMState:
     values = [mask(value, i) for i in range(32)]
     if ofset + 32 > len(state.memory):
         state.memory += [0] * (ofset + 32 - len(state.memory))
-    else:
-        state.memory = state.memory[:ofset] + values + state.memory[ofset + 32:]
+
+    state.memory = state.memory[:ofset] + values + state.memory[ofset + 32:]
+
     return state
 
 def opcode_mstore8(state) -> EVMState:
-    # TODO: implement
+    
+    ofset = state.pop()
+    value = state.pop()
+    if ofset + 1 > len(state.memory):
+        state.memory += [0] * (ofset + 1 - len(state.memory))
+    
+    state.memory[ofset] = value & 0xff
+
     return state
 
 def opcode_sload(state) -> EVMState:
