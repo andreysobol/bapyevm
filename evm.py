@@ -281,7 +281,8 @@ def opcode_coinbase(state) -> EVMState:
     return state
 
 def opcode_timestamp(state) -> EVMState:
-    # TODO: implement
+    timestatmp = state.timestamp
+    state.stack = state.stack + [timestatmp]
     return state
 
 def opcode_number(state) -> EVMState:
