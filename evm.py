@@ -22,6 +22,10 @@ class EVMState:
         self.chainid = 0
         self.basefee = 0
 
+def opcode_stop(state) -> EVMState:
+    # TODO: stop execution, implement this
+    return state
+
 def metaopcode_math(state, op, size) -> EVMState:
 
     if size == 1:
