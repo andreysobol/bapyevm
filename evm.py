@@ -10,6 +10,16 @@ class EVMState:
         self.address = address
         self.origin = origin
 
+        # block values
+        self.blockhashes = {}
+        self.blocknumber = 0
+        self.coinbase = 0
+        self.timestamp = 0
+        self.number = 0
+        self.difficulty = 0
+        self.gaslimit = 0
+        self.prevrandao = 0
+
 def metaopcode_math(state, op, size) -> EVMState:
 
     if size == 1:
@@ -258,7 +268,11 @@ def opcode_returndatacopy(state) -> EVMState:
     return state
 
 def opcode_blockhash(state) -> EVMState:
-    # TODO: implement
+    block_number = state.pop()
+    if block_number < state.blocknumber:
+        state.stack = state.stack + state.blockhashes[block_number]
+    else:
+        state.stack = state.stack + [0]
     return state
 
 def opcode_coinbase(state) -> EVMState:
