@@ -357,7 +357,12 @@ def opcode_mstore8(state) -> EVMState:
     return state
 
 def opcode_sload(state) -> EVMState:
-    # TODO: implement
+    key = state.pop()
+    if key not in state.storage:
+        value = 0
+    else:
+        value = state.storage[key]
+    state.stack = state.stack + [value]
     return state
 
 def opcode_sstore(state) -> EVMState:
