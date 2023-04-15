@@ -216,7 +216,7 @@ def opcode_balance(state) -> EVMState:
 
 def opcode_origin(state) -> EVMState:
     origin = state.origin
-    state.stack = state.stack + [address]
+    state.stack = state.stack + [origin]
     return state
 
 def opcode_caller(state) -> EVMState:
@@ -327,7 +327,7 @@ def opcode_mload(state) -> EVMState:
 
     values = state.memory[ofset:ofset + 32]
 
-    value = sum([values[i] * (256 ** i) for i in range(size)])
+    value = sum([values[i] * (256 ** i) for i in range(32)])
 
     state.stack = state.stack + [value]
 
