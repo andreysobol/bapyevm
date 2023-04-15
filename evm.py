@@ -616,23 +616,23 @@ def metaopcode_log(state, topic_size) -> EVMState:
     return state
 
 def opcode_log0(state) -> EVMState:
-    # TODO: implement LOG0
+    state = metaopcode_log(state, 0)
     return state
 
 def opcode_log1(state) -> EVMState:
-    # TODO: implement LOG1
+    state = metaopcode_log(state, 1)
     return state
 
 def opcode_log2(state) -> EVMState:
-    # TODO: implement LOG2
+    state = metaopcode_log(state, 2)
     return state
 
 def opcode_log3(state) -> EVMState:
-    # TODO: implement LOG3
+    state = metaopcode_log(state, 3)
     return state
 
 def opcode_log4(state) -> EVMState:
-    # TODO: implement LOG4
+    state = metaopcode_log(state, 4)
     return state
 
 def opcode_create(state) -> EVMState:
