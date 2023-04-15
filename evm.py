@@ -279,3 +279,51 @@ def opcode_push32(state) -> EVMState:
 def metaopcode_dup(state, index) -> EVMState:
     state.stack = state.stack + [state.stack[-index]]
     return state
+
+def opcode_dup1(state) -> EVMState:
+    return metaopcode_dup(state, 1)
+
+def opcode_dup2(state) -> EVMState:
+    return metaopcode_dup(state, 2)
+
+def opcode_dup3(state) -> EVMState:
+    return metaopcode_dup(state, 3)
+
+def opcode_dup4(state) -> EVMState:
+    return metaopcode_dup(state, 4)
+
+def opcode_dup5(state) -> EVMState:
+    return metaopcode_dup(state, 5)
+
+def opcode_dup6(state) -> EVMState:
+    return metaopcode_dup(state, 6)
+
+def opcode_dup7(state) -> EVMState:
+    return metaopcode_dup(state, 7)
+
+def opcode_dup8(state) -> EVMState:
+    return metaopcode_dup(state, 8)
+
+def opcode_dup9(state) -> EVMState:
+    return metaopcode_dup(state, 9)
+
+def opcode_dup10(state) -> EVMState:
+    return metaopcode_dup(state, 10)
+
+def opcode_dup11(state) -> EVMState:
+    return metaopcode_dup(state, 11)
+
+def opcode_dup12(state) -> EVMState:
+    return metaopcode_dup(state, 12)
+
+def opcode_dup13(state) -> EVMState:
+    return metaopcode_dup(state, 13)
+
+def opcode_dup14(state) -> EVMState:
+    return metaopcode_dup(state, 14)
+
+def opcode_dup15(state) -> EVMState:
+    return metaopcode_dup(state, 15)
+
+def opcode_dup16(state) -> EVMState:
+    return metaopcode_dup(state, 16)
