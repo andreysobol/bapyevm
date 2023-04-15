@@ -1,5 +1,5 @@
 class EVMState:
-    def __init__(self, bytecode, address):
+    def __init__(self, bytecode, address, origin):
         self.code = bytecode
         self.stack = []
         self.memory = []
@@ -8,6 +8,7 @@ class EVMState:
 
         # eth values
         self.address = address
+        self.origin = origin
 
 def metaopcode_math(state, op, size) -> EVMState:
 
@@ -203,7 +204,8 @@ def opcode_balance(state) -> EVMState:
     return state
 
 def opcode_origin(state) -> EVMState:
-    # TODO: implement
+    origin = state.origin
+    state.stack = state.stack + [address]
     return state
 
 def opcode_caller(state) -> EVMState:
