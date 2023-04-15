@@ -380,7 +380,8 @@ def opcode_jumpi(state) -> EVMState:
     return state
 
 def opcode_pc(state) -> EVMState:
-    # TODO: implement
+    pc = state.pc
+    state.stack = state.stack + [pc]
     return state
 
 def opcode_msize(state) -> EVMState:
