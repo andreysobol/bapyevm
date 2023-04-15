@@ -19,6 +19,7 @@ class EVMState:
         self.number = 0
         self.gaslimit = 0
         self.chainid = 0
+        self.basefee = 0
 
 def metaopcode_math(state, op, size) -> EVMState:
 
@@ -310,7 +311,8 @@ def opcode_selfbalance(state) -> EVMState:
     return state
 
 def opcode_basefee(state) -> EVMState:
-    # TODO: implement
+    basefee = state.basefee
+    state.stack = state.stack + [basefee]
     return state
 
 def opcode_pop(state) -> EVMState:
