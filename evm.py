@@ -276,7 +276,8 @@ def opcode_blockhash(state) -> EVMState:
     return state
 
 def opcode_coinbase(state) -> EVMState:
-    # TODO: implement
+    coinbase = state.coinbase
+    state.stack = state.stack + [coinbase]
     return state
 
 def opcode_timestamp(state) -> EVMState:
