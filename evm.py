@@ -2,7 +2,7 @@ class EVMState:
     def __init__(self, bytecode):
         self.code = bytecode
         self.stack = []
-        self.memory = bytearray()
+        self.memory = []
         self.storage = {}
         self.pc = 0
 
@@ -282,7 +282,14 @@ def opcode_mload(state) -> EVMState:
     return state
 
 def opcode_mstore(state) -> EVMState:
-    # TODO: implement
+    ofset = state.stack[-1]
+    value = state.stack[-2]
+    mask = lambda value, i: value >> (i * 8) & 0xff
+    values = [mask(value, i) for i in range(32)]
+    if ofset + 32 > len(state.memory):
+        state.memory += [0] * (ofset + 32 - len(state.memory))
+    else:
+        state.memory = state.memory[:ofset] + values + state.memory[ofset + 32:]
     return state
 
 def opcode_mstore8(state) -> EVMState:
