@@ -179,3 +179,99 @@ def metaopcode_push(state, size) -> EVMState:
     state.stack = state.stack + [stack_element]
     state.pc += size
     return state
+
+def opcode_push1(state) -> EVMState:
+    return metaopcode_push(state, 1)
+
+def opcode_push2(state) -> EVMState:
+    return metaopcode_push(state, 2)
+
+def opcode_push3(state) -> EVMState:
+    return metaopcode_push(state, 3)
+
+def opcode_push4(state) -> EVMState:
+    return metaopcode_push(state, 4)
+
+def opcode_push5(state) -> EVMState:
+    return metaopcode_push(state, 5)
+
+def opcode_push6(state) -> EVMState:
+    return metaopcode_push(state, 6)
+
+def opcode_push7(state) -> EVMState:
+    return metaopcode_push(state, 7)
+
+def opcode_push8(state) -> EVMState:
+    return metaopcode_push(state, 8)
+
+def opcode_push9(state) -> EVMState:
+    return metaopcode_push(state, 9)
+
+def opcode_push10(state) -> EVMState:
+    return metaopcode_push(state, 10)
+
+def opcode_push11(state) -> EVMState:
+    return metaopcode_push(state, 11)
+
+def opcode_push12(state) -> EVMState:
+    return metaopcode_push(state, 12)
+
+def opcode_push13(state) -> EVMState:
+    return metaopcode_push(state, 13)
+
+def opcode_push14(state) -> EVMState:
+    return metaopcode_push(state, 14)
+
+def opcode_push15(state) -> EVMState:
+    return metaopcode_push(state, 15)
+
+def opcode_push16(state) -> EVMState:
+    return metaopcode_push(state, 16)
+
+def opcode_push17(state) -> EVMState:
+    return metaopcode_push(state, 17)
+
+def opcode_push18(state) -> EVMState:
+    return metaopcode_push(state, 18)
+
+def opcode_push19(state) -> EVMState:
+    return metaopcode_push(state, 19)
+
+def opcode_push20(state) -> EVMState:
+    return metaopcode_push(state, 20)
+
+def opcode_push21(state) -> EVMState:
+    return metaopcode_push(state, 21)
+
+def opcode_push22(state) -> EVMState:
+    return metaopcode_push(state, 22)
+
+def opcode_push23(state) -> EVMState:
+    return metaopcode_push(state, 23)
+
+def opcode_push24(state) -> EVMState:
+    return metaopcode_push(state, 24)
+
+def opcode_push25(state) -> EVMState:
+    return metaopcode_push(state, 25)
+
+def opcode_push26(state) -> EVMState:
+    return metaopcode_push(state, 26)
+
+def opcode_push27(state) -> EVMState:
+    return metaopcode_push(state, 27)
+
+def opcode_push28(state) -> EVMState:
+    return metaopcode_push(state, 28)
+
+def opcode_push29(state) -> EVMState:
+    return metaopcode_push(state, 29)
+
+def opcode_push30(state) -> EVMState:
+    return metaopcode_push(state, 30)
+
+def opcode_push31(state) -> EVMState:
+    return metaopcode_push(state, 31)
+
+def opcode_push32(state) -> EVMState:
+    return metaopcode_push(state, 32)
