@@ -349,3 +349,51 @@ def opcode_dup16(state) -> EVMState:
 def metaopcode_swap(state, index) -> EVMState:
     state.stack = state.stack[:-index] + [state.stack[-1]] + state.stack[-index:-1]
     return state
+
+def opcode_swap1(state) -> EVMState:
+    return metaopcode_swap(state, 1)
+
+def opcode_swap2(state) -> EVMState:
+    return metaopcode_swap(state, 2)
+
+def opcode_swap3(state) -> EVMState:
+    return metaopcode_swap(state, 3)
+
+def opcode_swap4(state) -> EVMState:
+    return metaopcode_swap(state, 4)
+
+def opcode_swap5(state) -> EVMState:
+    return metaopcode_swap(state, 5)
+
+def opcode_swap6(state) -> EVMState:
+    return metaopcode_swap(state, 6)
+
+def opcode_swap7(state) -> EVMState:
+    return metaopcode_swap(state, 7)
+
+def opcode_swap8(state) -> EVMState:
+    return metaopcode_swap(state, 8)
+
+def opcode_swap9(state) -> EVMState:
+    return metaopcode_swap(state, 9)
+
+def opcode_swap10(state) -> EVMState:
+    return metaopcode_swap(state, 10)
+
+def opcode_swap11(state) -> EVMState:
+    return metaopcode_swap(state, 11)
+
+def opcode_swap12(state) -> EVMState:
+    return metaopcode_swap(state, 12)
+
+def opcode_swap13(state) -> EVMState:
+    return metaopcode_swap(state, 13)
+
+def opcode_swap14(state) -> EVMState:
+    return metaopcode_swap(state, 14)
+
+def opcode_swap15(state) -> EVMState:
+    return metaopcode_swap(state, 15)
+
+def opcode_swap16(state) -> EVMState:
+    return metaopcode_swap(state, 16)
